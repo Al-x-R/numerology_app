@@ -1,0 +1,88 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #0d0f21;
+    color: #ffffff;
+}
+
+.font-manrope {
+    font-family: 'Manrope', sans-serif;
+}
+.card-bg {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.card-bg-accent {
+    background: linear-gradient(
+            145deg,
+            rgba(122, 95, 255, 0.1),
+            rgba(224, 184, 115, 0.05)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.accent-text {
+    color: #e0b873;
+}
+.accent-border {
+    border-color: #e0b873;
+}
+.accent-bg {
+    background-color: #7a5fff;
+}
+.modal-bg {
+    background-color: #1a1c3a;
+}
+
+.date-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.date-input::placeholder {
+    color: #a0a0a0;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(0.8);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
